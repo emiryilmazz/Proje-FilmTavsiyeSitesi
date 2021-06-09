@@ -1,0 +1,30 @@
+﻿@model Proje01.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2> Yeni Blog Ekleme </h2>
+<br/>
+<form class="form-g" method="post">
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FilmDetay)
+    @Html.TextBoxFor(x => x.FilmDetay, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.KucukResim)
+    @Html.TextBoxFor(x => x.KucukResim, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Video)
+    @Html.TextBoxFor(x => x.Video, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Blog Ekle</button>
+</form>
+

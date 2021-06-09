@@ -1,0 +1,70 @@
+﻿@using Proje01.Models.Siniflar
+@model List<Slaytlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_View_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                
+  
+
+                <div class="slider">
+                    <ul class="rslides" id="slider1" >
+                        @foreach (var x in Model)
+                        {
+                            <li><img src="~/icerik/film_res/@x.ImageSource" alt="" style="width:100%;"></li>
+                        }
+                        @*<li>
+                            <iframe width="995" height="595" src="https://www.youtube.com/embed/MAeUTAW0bjc" title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </li>
+                        <li><img src="~/icerik/film_res/jokerw.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/john-wickw2.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/parasitew.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/nobody1.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/mkw.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/roomw.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/isw.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/platformw.jpg" width="650" height="400" alt=""></li>
+                        <li><img src="~/icerik/film_res/escapew.jpg" width="650" height="400" alt=""></li>*@
+
+                    </ul>
+        </div>
+            </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+          
+        
+        <div class"content">
+            <div class="wrap">
+                <div class="wrapper">
+                    <div class="con-top">
+
+                        <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facil</p>-->
+                    </div>
+                    @Html.Action("Partial1","Default")
+                    <div class="grids">
+                        <div class="box1">
+                            @Html.Action("Partial3","Default")
+                            @Html.Action("Partial4","Default")
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+
+

@@ -1,0 +1,108 @@
+﻿@model Proje01.Models.Siniflar.Blogyorum
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_View_Layout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    @*<meta name="viewport" content="width=device-width, initial-scale=1">*@
+    @*<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />*@
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+    <!--script-->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+
+</head>
+<body>
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var x in Model.Deger1)
+                {
+                   <div class="single-grid">
+                
+                        <img src="~/icerik/film_res/@x.BlogImage" alt="" style="margin-bottom:20px"/><br />
+                        <h4> <a href="/Oneri/BlogDetay/@x.ID">@x.Baslik</a></h4>
+                        <p>
+                            @x.Aciklama.Substring(0, 120)<a href="/Oneri/BlogDetay/@x.ID">...Daha fazlasını oku</a>
+                        </p>
+                    </div>
+                }
+                    
+            @*<div class="content-form">
+                <h3>Yorum yapın</h3>
+                <form>
+                    <input type="text" placeholder="Adınız" required />
+                    <input type="text" placeholder="Mail adresi" required />
+                    <textarea placeholder="Yorum"></textarea>
+                    <input type="submit" value="Gönder" />
+                </form>
+            </div>*@
+                </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>Son Yazılar</h3>
+                    @foreach (var y in Model.Deger3)
+                    {
+                    <ul>
+                        <li><a href="/Oneri/BlogDetay/@y.ID">@y.Baslik</a></li>
+                        
+                    </ul>
+                    }
+                </div>
+                @*<div class="comments">
+                    <h3>RECENT COMMENTS</h3>
+                    <ul>
+                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="archives">
+                    <h3>ARCHIVES</h3>
+                    <ul>
+                        <li><a href="#">October 2013</a></li>
+                        <li><a href="#">September 2013</a></li>
+                        <li><a href="#">August 2013</a></li>
+                        <li><a href="#">July 2013</a></li>
+                    </ul>
+                </div>
+                <div class="categories">
+                    <h3>CATEGORIES</h3>
+                    <ul>
+                        <li><a href="#">Vivamus vestibulum nulla</a></li>
+                        <li><a href="#">Integer vitae libero ac risus e</a></li>
+                        <li><a href="#">Vestibulum commo</a></li>
+                        <li><a href="#">Cras iaculis ultricies</a></li>
+                    </ul>
+                </div>*@
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+   
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <p></p>
+        </div>
+    </div>
+
+    </body>
+</html>
+
+
+
