@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h2>Blog Güncelleme Sayfası</h2>
+<h2>Film Güncelleme Sayfası</h2>
 <br />
 @using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
 {
@@ -29,6 +29,6 @@
     @Html.LabelFor(x => x.Video)
     @Html.TextBoxFor(x => x.Video, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success">Blog Güncelle</button>
+    <button class="btn btn-success">Film Güncelle</button>
 }
 
